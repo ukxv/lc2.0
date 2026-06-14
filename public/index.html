@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="theme-color" content="#0C0C0E"/>
+  <title>Imkon LC</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen" class="hidden">
+  <div class="login-page">
+    <div class="login-left">
+      <div class="login-logo">
+        <div class="login-logo-box">I</div>
+        <span class="login-logo-text">Imkon LC</span>
+      </div>
+      <div class="login-tagline" id="login-tagline">Образовательный центр</div>
+      <div class="login-form-title" id="lbl-welcome">Добро пожаловать!</div>
+      <div class="login-form-sub" id="lbl-sub">Войдите в свой аккаунт</div>
+      <div id="login-error" class="login-error hidden"></div>
+      <div class="login-field">
+        <span class="login-field-icon">👤</span>
+        <input id="inp-un" type="text" autocomplete="username" placeholder="Логин"/>
+      </div>
+      <div class="login-field">
+        <span class="login-field-icon">🔒</span>
+        <input id="inp-pw" type="password" autocomplete="current-password" placeholder="••••••••"/>
+      </div>
+      <button id="btn-login" class="login-btn">Войти</button>
+      <div class="login-lang" style="gap:6px;margin-top:24px">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="uz">UZ</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button id="theme-toggle-login" class="theme-toggle" style="margin-left:auto" title="Toggle theme">🌙</button>
+      </div>
+    </div>
+    <div class="login-right">
+      <div class="login-right-deco"></div>
+      <div class="login-right-deco"></div>
+      <div class="login-right-logo">Imkon</div>
+      <div class="login-right-sub">Learning Center</div>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE APP -->
+<div id="mobile-app" class="hidden">
+  <div class="m-header" id="m-header"></div>
+  <div class="m-content" id="m-content"></div>
+  <nav class="m-nav" id="m-nav"></nav>
+</div>
+
+<!-- ADMIN APP -->
+<div id="admin-app" class="hidden">
+  <aside class="a-sidebar" id="a-sidebar"></aside>
+  <div class="a-main">
+    <header class="a-header" id="a-header"></header>
+    <main class="a-content" id="a-content"></main>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal-overlay" class="modal-overlay hidden" onclick="closeModalOutside(event)">
+  <div id="modal" class="modal"></div>
+</div>
+
+<div id="toasts" class="toasts"></div>
+<script src="/app.js"></script>
+</body>
+</html>
